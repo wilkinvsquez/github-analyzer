@@ -31,7 +31,7 @@ export default function Home() {
 	}, [query]);
 
 	const handleRedirect = (username: string) => {
-		router.push(`/${username}`);
+		router.push(`/pages/${username}`);
 	};
 
 	return (
