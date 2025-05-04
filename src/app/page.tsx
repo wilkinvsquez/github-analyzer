@@ -31,7 +31,7 @@ export default function Home() {
 	}, [query]);
 
 	const handleRedirect = (username: string) => {
-		router.push(`/${username}`);
+		router.push(`/pages/${username}`);
 	};
 
 	return (
@@ -83,6 +83,11 @@ export default function Home() {
 						</div>
 					))}
 				</div>
+			)}
+			{results.length === 0 && query.length >= 2 && !loading && (
+				<p className='text-center text-gray-400 mt-6'>
+					No se encontraron resultados para "{query}".
+				</p>
 			)}
 		</main>
 	);
