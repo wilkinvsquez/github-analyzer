@@ -6,7 +6,7 @@ import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
 
 export default async function UserPage({ params }: DynamicUserProps) {
-	const { username } = await params;
+	const { username } = params;
 	let userData: any, reposData: any;
 	userData = await getUser(username);
 	try {
