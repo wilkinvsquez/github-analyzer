@@ -1,8 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 GitHub Analyzer
 
-## Getting Started
+GitHub Analyzer is a modern, responsive dashboard built with **Next.js** and **Tailwind CSS** that allows you to visualize and filter data from any GitHub user. It fetches public repositories, aggregates statistics, and presents insights such as:
 
-First, run the development server:
+-   Most used languages (pie chart)
+-   Top repositories by stars, forks, and commits
+-   Filterable and searchable list of repositories
+
+---
+
+## 🎯 Purpose
+
+This project was built as a practical showcase for:
+
+-   Learning and demonstrating full-stack data visualization using the GitHub REST API
+-   Practicing advanced React/Next.js patterns with hooks, props, and dynamic filtering
+-   Highlighting frontend best practices for component design, responsiveness, and UX
+-   Building a strong portfolio project to demonstrate skills in interviews
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology       | Reason                                                          |
+| ---------------- | --------------------------------------------------------------- |
+| **Next.js**      | For server-side rendering, routing, and SEO-friendly pages      |
+| **TypeScript**   | Type safety for better developer experience and maintainability |
+| **Tailwind CSS** | For fast, utility-first styling and responsiveness              |
+| **Recharts**     | To create clean, responsive data visualizations (charts)        |
+| **GitHub API**   | To retrieve public data and statistics for GitHub users         |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/github-analyzer.git
+cd github-analyzer
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+### 3. Set up environment variables
+
+Create a `.env.local` file in the root directory and add your GitHub API token:
+
+```bash
+GITHUB_TOKEN=your_github_token
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
@@ -14,23 +72,29 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 6. Explore the application
 
-## Learn More
+You can search for any GitHub user and explore their repositories, view statistics, and filter the data as needed.
 
-To learn more about Next.js, take a look at the following resources:
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   [Next.js Documentation](https://nextjs.org/docs)
+-   [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+-   [Recharts Documentation](https://recharts.org/en-US/)
+-   [GitHub API Documentation](https://docs.github.com/en/rest)
+-   [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+-   [React Documentation](https://reactjs.org/docs/getting-started.html)
+-   [GitHub API Rate Limiting](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
+-   [GitHub API Authentication](https://docs.github.com/en/rest/guides/basics-of-authentication)
+-   [GitHub API Search Repositories](https://docs.github.com/en/rest/search#search-repositories)
+-   [GitHub API Repositories](https://docs.github.com/en/rest/reference/repos)
+-   [GitHub API Users](https://docs.github.com/en/rest/reference/users)
+-   [GitHub API Rate Limit](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
+-   [GitHub API GraphQL](https://docs.github.com/en/graphql)
+-   [GitHub API REST](https://docs.github.com/en/rest)

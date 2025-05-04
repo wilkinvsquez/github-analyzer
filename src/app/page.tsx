@@ -84,6 +84,11 @@ export default function Home() {
 					))}
 				</div>
 			)}
+			{results.length === 0 && query.length >= 2 && !loading && (
+				<p className='text-center text-gray-400 mt-6'>
+					No se encontraron resultados para "{query}".
+				</p>
+			)}
 		</main>
 	);
 }

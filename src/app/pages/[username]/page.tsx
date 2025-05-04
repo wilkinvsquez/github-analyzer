@@ -2,10 +2,6 @@ import { getUser, getUserRepos } from "@/services/githubAPI";
 import { getCommitCount } from "@/services/githubAPI";
 import { DynamicUserProps } from "@/Interfaces/DynamicUserProps";
 import { Dashboard } from "@/components/dashboard/Dashboard";
-
-import { UserSkeleton } from "@/components/skeletons/UserSkeleton";
-import { RepoListSkeleton } from "@/components/skeletons/RepoListSekeleton";
-import { DashboardSkeleton } from "@/components/skeletons/DashboardSkeleton";
 import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
 
