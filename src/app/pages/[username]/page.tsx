@@ -1,15 +1,15 @@
+//"use client";
 import { getUser, getUserRepos } from "@/services/githubAPI";
 import { getCommitCount } from "@/services/githubAPI";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
-
 export default async function UserPage({
 	params,
 }: {
-	params: { username: string };
+	params: Promise<{ username: string }>;
 }) {
-	const { username } = params;
+	const { username } = await params;
 	let userData: any, reposData: any;
 	userData = await getUser(username);
 	try {
