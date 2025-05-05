@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  devIndicators: false,
-  //output: "export",
-
+const nextConfig = {
+  output: 'export',
+  basePath: '/github-analyzer',
+  assetPrefix: '/github-analyzer/',
 };
 
-export default nextConfig;
+module.exports = nextConfig;
