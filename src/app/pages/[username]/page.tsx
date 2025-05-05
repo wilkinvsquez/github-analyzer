@@ -1,12 +1,23 @@
+//"use client";
 import { getUser, getUserRepos } from "@/services/githubAPI";
 import { getCommitCount } from "@/services/githubAPI";
-import { DynamicUserProps } from "@/Interfaces/DynamicUserProps";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
 
-export default async function UserPage({ params }: DynamicUserProps) {
-	const { username } = params;
+//export async function generateStaticParams() {
+//	const users = await fetch("https://api.example.com/users").then(res =>
+//		res.json(),
+//	);
+//	return users.map((user: any) => ({ username: user.username }));
+//}
+
+export default async function UserPage({
+	params,
+}: {
+	params: Promise<{ username: string }>;
+}) {
+	const { username } = await params;
 	let userData: any, reposData: any;
 	userData = await getUser(username);
 	try {
