@@ -4,6 +4,14 @@ import { getCommitCount } from "@/services/githubAPI";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
+
+//export async function generateStaticParams() {
+//	const users = await fetch("https://api.example.com/users").then(res =>
+//		res.json(),
+//	);
+//	return users.map((user: any) => ({ username: user.username }));
+//}
+
 export default async function UserPage({
 	params,
 }: {
