@@ -1,11 +1,14 @@
 import { getUser, getUserRepos } from "@/services/githubAPI";
 import { getCommitCount } from "@/services/githubAPI";
-import { DynamicUserProps } from "@/Interfaces/DynamicUserProps";
 import { Dashboard } from "@/components/dashboard/Dashboard";
 import { RepoList } from "@/components/repositories/RepoList";
 import { UserCard } from "@/components/user/UserCard";
 
-export default async function UserPage({ params }: DynamicUserProps) {
+export default async function UserPage({
+	params,
+}: {
+	params: { username: string };
+}) {
 	const { username } = params;
 	let userData: any, reposData: any;
 	userData = await getUser(username);
