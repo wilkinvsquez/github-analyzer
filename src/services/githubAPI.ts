@@ -3,7 +3,7 @@ import axios from 'axios';
 const BASE_URL = 'https://api.github.com';
 
 const headers = {
-    Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    "Authorization": `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
 }
 
 /**
@@ -14,6 +14,7 @@ const headers = {
  */
 export const getUser = async (username: string) => {
     try {
+        console.log(`Fetching user data for ${username}`);
         const response = await axios.get(`${BASE_URL}/users/${username}`, { headers });
         return response.data;
     } catch (error) {
@@ -70,7 +71,7 @@ export const getRepoLanguages = async (username: string, repoName: string) => {
 export async function getCommitCount(owner: string, repo: string): Promise<number> {
     const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`, {
         headers: {
-            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN}`,
             Accept: 'application/vnd.github+json',
         },
     });
